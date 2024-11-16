@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+.title {
+  margin: 40px 0px 0px 120px;
+  text-decoration: underline wavy #ff1619;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 10px;
+
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.title img {
+  margin-top: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
+}
+
+.title img:active {
+  transform: scale(0.95); /* Slightly shrink the image */
+  filter: brightness(1.2); /* Make the image lighter */
+}
+
+body {
+  background-color: #151718;
+  color: white;
+  min-height: 100vh;
+}
+
+/* --------------- HERO SECTION --------------- */
+.hero-events {
+  background-color: #191b1c;
+  max-width: 75%;
+  margin: 100px auto 0px auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  border-radius: 20px;
+}
+
+.hero-events .event-img {
+  min-width: 500px;
+  max-width: 500px;
+  height: 300px;
+  margin: 40px 30px 40px 20px;
+  border-radius: 30px;
+  transition: transform 0.5s ease;
+}
+
+.hero-events h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  transition: transform 0.5s ease;
+}
+
+.hero-events p {
+  max-width: 500px;
+  margin-bottom: 1.3rem;
+  transition: transform 0.5s ease;
+}
+
+.hero-events .book-ticket {
+  background: transparent;
+  color: white;
+  padding: 0.8rem 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+
+  align-self: flex-end;
+  margin-bottom: 50px;
+  width: 20%;
+  box-sizing: border-box;
+}
+
+.hero-events .book-ticket:hover {
+  background: #2a2c2d;
+  transform: translateY(-2px);
+}
+
+#left-arrow {
+  background-color: transparent;
+  border: none;
+
+  align-self: center;
+  margin-left: 20px;
+
+  cursor: pointer;
+}
+
+#right-arrow {
+  background-color: transparent;
+  border: none;
+
+  align-self: center;
+  margin-left: auto;
+  margin-right: 20px;
+
+  cursor: pointer;
+}
+
+/* ------------------- FILTERS ------------------- */
+
+.filters {
+  margin: 60px auto;
+  max-width: 75%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.filters img {
+  background-color: transparent;
+
+  padding: 20px;
+  display: block;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 1px solid #8d1012;
+  border-radius: 100px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.filters p {
+  text-align: center;
+  font-weight: bold;
+
+  max-width: 100px;
+}
+
+.filters img:hover {
+  transform: scale(1.005);
+  box-shadow: 0 0 15px rgba(255, 22, 25, 0.7);
+}
+
+/* --------------- DROPDOWNS --------------- */
+.dropdown-container {
+  margin-left: 180px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+}
+
+.dropdown-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "↓";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  pointer-events: none;
+}
+
+.styled-select {
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid #ff1619;
+  border-radius: 100px;
+  color: white;
+  font-size: 14px;
+  padding: 8px 32px 8px 12px;
+  min-width: 160px;
+  cursor: pointer;
+}
+
+/* Style the dropdown options */
+.styled-select option {
+  background-color: #191b1c;
+  color: white;
+  padding: 8px;
+}
+.dropdown-label {
+  color: #fff;
+  font-size: 14px;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.styled-select {
+  appearance: none;
+  border: 1px solid #ff0000;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 32px 8px 12px;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.styled-select:hover {
+  background-color: #333;
+}
+
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  pointer-events: none;
+}
+
+.styled-select:focus {
+  outline: none;
+  border-color: #ff0000;
+}
+
+/* --------------- EVENTS --------------- */
+.events {
+  margin: 50px auto;
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.events img {
+  min-width: 300px;
+  max-width: 300px;
+  height: 160px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.events h2 {
+  max-width: 350px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.events h3 {
+  max-width: 350px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.events p {
+  max-width: 350px;
+  font-size: 0.9rem;
+}
+
+#no-events {
+  display: none;
+  width: 100%;
+  margin: 20px auto 250px auto;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+/* ---------------------------------- RESOLUTION CHANGE ---------------------------------- */
+
+@media (max-width: 480px) {
+  .title {
+    margin: 20px 0px 0px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .title h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-events {
+    flex-direction: column;
+    max-width: 90%;
+    margin: 50px auto 0px auto;
+  }
+
+  .hero-events .event-img {
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0px;
+  }
+
+  .hero-events h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .hero-events p {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-events .book-ticket {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #left-arrow,
+  #right-arrow {
+    margin: 10px;
+  }
+
+  .filters {
+    display: none;
+  }
+
+  .dropdown-container {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10px;
+  }
+
+  .dropdown-label {
+    font-size: 1rem;
+  }
+
+  .events {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+    <link rel="stylesheet" href="events.css" />
+    <link rel="icon" href="images/icons/icon.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <section class="title">
+      <img
+        onclick="window.location.href='index.html'"
+        src="images/icons/arrow-left-heading.svg"
+        alt="previous page arrow"
+      />
+      <h1>Events</h1>
+    </section>
+
+    <section>
+      <div class="hero-events">
+        <button id="left-arrow">
+          <img src="images/icons/arrow-left.svg" alt="left arrow" />
+        </button>
+        <img class="event-img" src="images/maaya.jpg" alt="" />
+        <div class="hero-event-details">
+          <h2>MAAYA 2024</h2>
+          <p>PES ELECTRONIC CITY'S BIGGEST CULTURAL FESTIVAL</p>
+        </div>
+        <button class="book-ticket">BOOK TICKETS</button>
+
+        <button id="right-arrow">
+          <img src="images/icons/arrow-right.svg" alt="right arrow" />
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div class="filters">
+        <div class="festival" data-category="festival">
+          <img src="images/icons/festival.svg" alt="festival" />
+          <p>Festivals</p>
+        </div>
+        <div class="music" data-category="music">
+          <img src="images/icons/music.svg" alt="music icon" />
+          <p>Music</p>
+        </div>
+        <div class="hackathon" data-category="hackathon">
+          <img src="images/icons/hackathons.svg" alt="hackathon icon" />
+          <p>Hackathons</p>
+        </div>
+        <div class="literature" data-category="literature">
+          <img src="images/icons/literature.svg" alt="literature icon" />
+          <p>Literature</p>
+        </div>
+        <div class="drama" data-category="drama">
+          <img src="images/icons/drama.svg" alt="drama/theatre icon" />
+          <p>Drama</p>
+        </div>
+        <div class="fashion" data-category="fashion">
+          <img src="images/icons/fashion.svg" alt="fashion icon" />
+          <p>Fashion</p>
+        </div>
+        <div class="robotics" data-category="robotics">
+          <img src="images/icons/mechanical.svg" alt="mechanical icon" />
+          <p>Mechanics</p>
+        </div>
+        <div class="quiz" data-category="quiz">
+          <img src="images/icons/quiz.svg" alt="quiz icon" />
+          <p>Quiz</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="dropdown-container">
+        <label class="dropdown-label">Show only</label>
+        <div class="select-wrapper">
+          <select id="event-status" class="styled-select">
+            <option value="all">All events</option>
+            <option value="ongoing">Ongoing events</option>
+            <option value="upcoming">Upcoming events</option>
+            <option value="archived">Past events</option>
+          </select>
+        </div>
+        <div class="select-wrapper">
+          <select id="event-campus" class="styled-select">
+            <option value="all">Both Campus</option>
+            <option value="ec">Electronic City Campus</option>
+            <option value="rr">Ring Road Campus</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="events">
+        <div class="rr upcoming drama">
+          <img src="images/openmic.png" alt="open mic picture" />
+          <h2>OPEN MIC'24</h2>
+          <h3>TDM Studio, GJB</h3>
+          <p>Novermber 15, 4:00 PM</p>
+        </div>
+
+        <div class="rr ongoing festival">
+          <img src="images/design.jpg" alt="design event picture" />
+          <h2>DESIGN SANTHE - RR CAMPUS</h2>
+          <h3>GJB Student Lounge</h3>
+          <p>November 13, 4:00 PM</p>
+        </div>
+
+        <div class="ec archived literature">
+          <img src="images/quidpro.jpg" alt="quidpro picture" />
+          <h2>Quid Pro Quo</h2>
+          <h3>PESU EC Campus</h3>
+          <p>November 06, 1:30 PM</p>
+        </div>
+      </div>
+      <div id="no-events">No Events Found</div>
+    </section>
+
+    <script src="events.js"></script>
+  </body>
+</html>
